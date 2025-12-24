@@ -21,9 +21,8 @@ fi
 npm i -g @openai/codex
 
 # copy the codex config from .codex/config.toml to $HOME/.codex/config.toml, check if the file exists
-if [ ! -f "$HOME/.codex/config.toml" ]; then
-    cp .codex/config.toml $HOME/.codex/config.toml
-fi
+mkdir -p "$HOME/.codex"
+cp .codex/config.toml "$HOME/.codex/config.toml"
 
 # ask user deployment name and instance name
 read -p "Enter deployment name: " DEPLOYMENT_NAME
@@ -39,9 +38,9 @@ if [ ! -f "$HOME/.api_keys" ]; then
 fi
 
 # check if AZURE_OPENAI_API_KEY exists in $HOME/.api_keys, if not, ask user to enter the api key, else tell user api key already set
-if grep -q "AZURE_OPENAI_API_KEY" "$HOME/.api_keys"; then
+if grep -q "export AZURE_OPENAI_API_KEY=" "$HOME/.api_keys"; then
     echo "AZURE_OPENAI_API_KEY already set."
 else
     read -p "Enter AZURE_OPENAI_API_KEY: " AZURE_OPENAI_API_KEY
-    echo "AZURE_OPENAI_API_KEY=$AZURE_OPENAI_API_KEY" >> "$HOME/.api_keys"
+    echo "export AZURE_OPENAI_API_KEY=$AZURE_OPENAI_API_KEY" >> "$HOME/.api_keys"
 fi
