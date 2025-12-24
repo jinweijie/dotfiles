@@ -8,3 +8,4 @@ LICENSE
 .stow-local-ignore
 .idea
 .vscode
+.codex

@@ -1,0 +1,12 @@
+model = "<DEPLOYMENT_NAME>"
+model_provider = "azure"
+preferred_auth_method = "apikey"
+model_reasoning_effort = "medium"
+
+[model_providers.azure]
+name = "Azure"
+base_url = "https://<INSTANCE_NAME>.openai.azure.com/openai"
+env_key = "AZURE_OPENAI_API_KEY"
+query_params = { "api-version" = "2025-04-01-preview" } # Adjust api-version as needed
+wire_api = "responses"
+model_reasoning_effort = "high"
