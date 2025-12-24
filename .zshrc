@@ -118,6 +118,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # proxy functions
 [[ -f ~/.config/zsh/.proxy.zsh ]] && source ~/.config/zsh/.proxy.zsh
 
+# nvm
+[ -f ~/.config/nvm/nvmrc.sh ] && source ~/.config/nvm/nvmrc.sh
+
 # add ssh keys
 [[ -f ~/.ssh/id_rsa_key ]] && ssh-add -q ~/.ssh/id_rsa_key
 
