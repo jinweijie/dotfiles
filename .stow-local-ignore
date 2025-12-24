@@ -9,4 +9,4 @@ LICENSE
 .idea
 .vscode
 .codex
-.install_ai.sh
+install_codex.sh
