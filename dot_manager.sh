@@ -47,7 +47,7 @@ check_sudo() {
   fi
 }
 
-# Install function (from install.sh)
+# Install function
 install_packages() {
   info "Installing required packages..."
   check_sudo
@@ -125,8 +125,8 @@ setup_zsh() {
   info "Setup complete. Restart your terminal and switch to zsh."
 }
 
-# Uninstall function (from uninstall.sh)
-uninstall_zsh() {
+# Uninstall function
+uninstall_packages() {
   info "Uninstalling zsh configuration..."
   
   # Check if uninstall_oh_my_zsh function exists
@@ -316,7 +316,7 @@ main() {
       stow_dotfiles
       ;;
     uninstall)
-      uninstall_zsh
+      uninstall_packages
       ;;
     set_proxy)
       set_proxy
