@@ -72,8 +72,8 @@ Runs install, setup, and stow in sequence.
 
 ## What Gets Installed
 
-**System packages:** zsh, git, curl, zip, tmux, vim, bfs, fd, ripgrep, **stow**  
-**Tools:** fzf (fuzzy finder), Zim framework
+**System packages:** zsh, git, curl, zip, vim, bfs, fd, ripgrep, **stow**  
+**Tools:** fzf (fuzzy finder), Zim framework, Zellij
 
 ## Dotfiles Management
 

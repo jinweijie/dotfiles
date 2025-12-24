@@ -118,8 +118,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # proxy functions
 [[ -f ~/.config/zsh/.proxy.zsh ]] && source ~/.config/zsh/.proxy.zsh
 
-# add keys
+# add ssh keys
 [[ -f ~/.ssh/id_rsa_key ]] && ssh-add -q ~/.ssh/id_rsa_key
 
-# nuget keys
-[[ -f ~/.nuget_keys ]] && source ~/.nuget_keys && echo 'Nuget Keys Added.'
+# add api keys
+[[ -f ~/.api_keys ]] && source ~/.api_keys
