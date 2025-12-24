@@ -106,7 +106,7 @@ The repository includes a `config.kdl` for **Zellij** with a customized Gruvbox 
 
 ### Installation
 
-`zsh-manager.sh` will try to install Zellij automatically by downloading the linux binary. If you need to do it manually:
+`dot_manager.sh` will try to install Zellij automatically by downloading the linux binary. If you need to do it manually:
 
 ```bash
 # Download binary

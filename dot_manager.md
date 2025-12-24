@@ -10,8 +10,8 @@ git clone <your-repo-url> ~/dotfiles
 cd ~/dotfiles
 
 # 2. Install packages, setup zsh, and link dotfiles
-chmod +x zsh-manager.sh
-./zsh-manager.sh all
+chmod +x dot_manager.sh
+./dot_manager.sh all
 ```
 
 Then restart your terminal or run `zsh`.
@@ -105,7 +105,7 @@ When running `stow`, the script will:
 
 **Permission denied?**
 ```bash
-chmod +x zsh-manager.sh
+chmod +x dot_manager.sh
 ```
 
 **Can't change shell?**

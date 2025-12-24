@@ -21,7 +21,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Fuzzy Finder (requires fzf installed via zsh-manager or system)
+" Fuzzy Finder (requires fzf installed via dot_manager or system)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 

@@ -182,7 +182,7 @@ stow_dotfiles() {
   local repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
   
   if ! command -v stow &> /dev/null; then
-    die "stow is not installed. Run './zsh-manager.sh install' first."
+    die "stow is not installed. Run './dot_manager.sh install' first."
   fi
   
   info "Setting up dotfiles with stow..."
