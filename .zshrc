@@ -126,3 +126,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # add api keys
 [[ -f ~/.api_keys ]] && source ~/.api_keys
+
+# auto-start zellij inside interactive shells unless disabled
+if [[ -z "${SKIP_ZELLIJ_AUTO:-}" ]]; then
+  if [[ $- == *i* ]] && [[ -t 0 ]] && [[ -t 1 ]]; then
+    if [[ -z "${ZELLIJ:-}" ]] && [[ -z "${TMUX:-}" ]]; then
+      if command -v zellij >/dev/null 2>&1; then
+        zellij attach --create main
+      fi
+    fi
+  fi
+fi
