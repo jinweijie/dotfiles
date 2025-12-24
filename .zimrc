@@ -1,0 +1,24 @@
+zmodule environment
+zmodule git
+zmodule input
+zmodule termtitle
+zmodule utility
+zmodule duration-info
+zmodule git-info
+zmodule asciiship
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+zmodule zsh-users/zsh-autosuggestions
+
+zmodule archive
+zmodule romkatv/powerlevel10k
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+zmodule zsh-users/zsh-autosuggestions
+zmodule fzf
+zmodule Aloxaf/fzf-tab
+
+#zmodule joke/zim-chezmoi
+#zmodule spaceship-prompt/spaceship-prompt --name spaceship --no-submodules

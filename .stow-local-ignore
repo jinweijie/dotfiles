@@ -1,0 +1,10 @@
+README.md
+zsh-manager.sh
+zsh-manager.md
+.git
+.gitignore
+.DS_Store
+LICENSE
+.stow-local-ignore
+.idea
+.vscode

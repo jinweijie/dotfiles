@@ -1,0 +1,182 @@
+################################ common alias ################################
+
+if [ -x "$(command -v exa)" ]; then
+  alias l='exa'
+  alias la='exa -la'
+  alias ll='exa -lh'
+  alias ls='exa --color=auto'
+  alias lt='exa --tree'
+fi
+
+################################### docker ###################################
+alias dk='docker'
+alias dklc='docker ps -l'  # List last Docker container
+alias dklcid='docker ps -l -q'  # List last Docker container ID
+alias dklcip='docker inspect -f "{{.NetworkSettings.IPAddress}}" $(docker ps -l -q)'  # Get IP of last Docker container
+alias dkps='docker ps'  # List running Docker containers
+alias dkpsa='docker ps -a'  # List all Docker containers
+alias dki='docker images'  # List Docker images
+alias dkrmac='docker rm $(docker ps -a -q)'  # Delete all Docker containers
+alias dkrmlc='docker-remove-most-recent-container'  # Delete most recent (i.e., last) Docker container
+
+case $OSTYPE in
+  darwin*|*bsd*|*BSD*)
+    alias dkrmui='docker images -q -f dangling=true | xargs docker rmi'  # Delete all untagged Docker images
+    ;;
+  *)
+    alias dkrmui='docker images -q -f dangling=true | xargs -r docker rmi'  # Delete all untagged Docker images
+    ;;
+esac
+
+alias dkrmall='docker-remove-stale-assets'  # Delete all untagged images and exited containers
+alias dkrmli='docker-remove-most-recent-image'  # Delete most recent (i.e., last) Docker image
+alias dkrmi='docker-remove-images'  # Delete images for supplied IDs or all if no IDs are passed as arguments
+alias dkideps='docker-image-dependencies'  # Output a graph of image dependencies using Graphiz
+alias dkre='docker-runtime-environment'  # List environmental variables of the supplied image ID
+alias dkelc='docker exec -it `dklcid` bash' # Enter last container (works with Docker 1.3 and above)
+alias dkex='docker exec -it ' # Useful to run any commands into container without leaving host
+alias dkri='docker run --rm -i '
+alias dkrit='docker run --rm -it '
+alias dkoverlay='docker inspect $(docker ps -qa) | jq -r "map([.Name, .GraphDriver.Data.MergedDir]) | .[] | \"\(.[0])\t\(.[1])\""'
+
+########################################################################################################################
+
+alias dkc='docker compose'
+alias dkcb='docker compose build'
+alias dkcB='docker compose build --no-cache'
+alias dkccp='docker compose copy'
+alias dkccr='docker compose create'
+alias dkccv='docker compose convert'
+alias dkcd='docker compose down'
+alias dkce='docker compose exec -e COLUMNS=`tput cols` -e LINES=`tput lines`'
+alias dkcev='docker compose events'
+alias dkci='docker compose images'
+alias dkck='docker compose kill'
+alias dkcl='docker compose logs'
+alias dkcL='docker compose logs -f'
+alias dkcls='docker compose ls'
+alias dkcp='docker compose pause'
+alias dkcP='docker compose unpause'
+alias dkcpl='docker compose pull'
+alias dkcph='docker compose push'
+alias dkcpo='docker compose port'
+alias dkcps='docker compose ps'
+alias dkcr='docker compose run -e COLUMNS=`tput cols` -e LINES=`tput lines`'
+alias dkcR='docker compose run -e COLUMNS=`tput cols` -e LINES=`tput lines` --rm'
+alias dkcrm='docker compose rm'
+alias dkcs='docker compose start'
+alias dkcsc='docker-compose scale'
+alias dkcS='docker compose restart'
+alias dkct='docker compose top'
+alias dkcu='docker compose up'
+alias dkcU='docker compose up -d'
+alias dkcv='docker compose version'
+alias dkcx='docker compose stop'
+alias dkcdu='docker compose down && docker compose up -d'
+
+# Added more recent cleanup options from newer docker versions
+alias dkip='docker image prune -a -f'
+alias dkvp='docker volume prune -f'
+alias dksp='docker system prune -a -f'
+
+
+################################### docker compose ###################################
+
+alias dco="docker-compose"
+alias dcob="docker-compose build"
+alias dcofresh="docker-compose-fresh"
+alias dcol="docker-compose logs -f --tail 100"
+alias dcou="docker-compose up"
+
+################################### git ##############################################
+
+alias gcl='git clone'
+alias ga='git add'
+alias grm='git rm'
+alias gap='git add -p'
+alias gall='git add -A'
+alias gf='git fetch --all --prune'
+alias gft='git fetch --all --prune --tags'
+alias gfv='git fetch --all --prune --verbose'
+alias gftv='git fetch --all --prune --tags --verbose'
+alias gus='git reset HEAD'
+alias gpristine='git reset --hard && git clean -dfx'
+alias gclean='git clean -fd'
+alias gm="git merge"
+alias gmv='git mv'
+alias g='git'
+alias get='git'
+alias gst='git status'
+alias gs='git status'
+alias gss='git status -s'
+alias gsu='git submodule update --init --recursive'
+alias gl='git pull'
+alias glum='git pull upstream master'
+alias gpr='git pull --rebase'
+alias gpp='git pull && git push'
+alias gup='git fetch && git rebase'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpu='git push --set-upstream'
+alias gpuo='git push --set-upstream origin'
+alias gpom='git push origin master'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gra='git remote add'
+alias gd='git diff'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcm='git commit -v -m'
+alias gcam="git commit -v -am"
+alias gci='git commit --interactive'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbt='git branch --track'
+alias gbm='git branch -m'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcb='git checkout -b'
+alias gcob='git checkout -b'
+alias gct='git checkout --track'
+alias gexport='git archive --format zip --output'
+alias gdel='git branch -D'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggs="gg --stat"
+alias gsl="git shortlog -sn"
+alias gwc="git whatchanged"
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gtl="git tag -l"
+# From http://blogs.atlassian.com/2014/10/advanced-git-aliases/
+# Show commits since last pull
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+# Add uncommitted and unstaged changes to the last commit
+alias gcaa="git commit -a --amend -C HEAD"
+alias ggui="git gui"
+alias gcsam="git commit -S -am"
+alias gstd="git stash drop"
+alias gstl="git stash list"
+alias gh='cd "$(git rev-parse --show-toplevel)"'
+# Show untracked files
+alias gu='git ls-files . --exclude-standard --others'
+
+case $OSTYPE in
+  darwin*)
+    alias gtls="git tag -l | gsort -V"
+    ;;
+  *)
+    alias gtls='git tag -l | sort -V'
+    ;;
+esac
+
+if [ -x "$(command -v lazygit)" ]; then
+  alias gla='lazygit'
+fi

@@ -1,0 +1,48 @@
+// Zellij Configuration File
+
+// Theme (Gruvbox Dark)
+themes {
+    gruvbox-dark {
+        fg "#ebdbb2"
+        bg "#282828"
+        black "#282828"
+        red "#cc241d"
+        green "#98971a"
+        yellow "#d79921"
+        blue "#458588"
+        magenta "#b16286"
+        cyan "#689d6a"
+        white "#a89984"
+        orange "#d65d0e"
+    }
+}
+
+theme "gruvbox-dark"
+
+// UI
+default_layout "compact"
+pane_frames false
+mouse_mode true
+
+// Keybindings
+keybinds {
+    normal {
+        // bind "Ctrl g" { SwitchToMode "Locked"; }
+        // bind "Ctrl p" { SwitchToMode "Pane"; }
+        // bind "Ctrl n" { SwitchToMode "Resize"; }
+        // bind "Ctrl t" { SwitchToMode "Tab"; }
+        // bind "Ctrl s" { SwitchToMode "Scroll"; }
+        // bind "Ctrl o" { SwitchToMode "Session"; }
+        // bind "Ctrl q" { Quit; }
+    }
+    shared_except "locked" {
+        bind "Ctrl h" { MoveFocus "Left"; }
+        bind "Ctrl l" { MoveFocus "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Alt Left" { MoveFocusOrTab "Left"; }
+        bind "Alt Right" { MoveFocusOrTab "Right"; }
+        bind "Alt Up" { MoveFocus "Up"; }
+        bind "Alt Down" { MoveFocus "Down"; }
+    }
+}
