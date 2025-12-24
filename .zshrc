@@ -106,17 +106,17 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.config/zsh/.fzfrc.zsh ] && source ~/.config/zsh/.fzfrc.zsh
-[ -f ~/.config/zsh/.fzftabrc.zsh ] && source ~/.config/zsh/.fzftabrc.zsh
+[ -f ~/.config/zsh/.fzfrc.sh ] && source ~/.config/zsh/.fzfrc.sh
+[ -f ~/.config/zsh/.fzftabrc.sh ] && source ~/.config/zsh/.fzftabrc.sh
 
 # aliases file
 [[ -f ~/.config/zsh/.aliases ]] && source ~/.config/zsh/.aliases
 
 # utility functions
-[[ -f ~/.config/zsh/.util_func.zsh ]] && source ~/.config/zsh/.util_func.zsh
+[[ -f ~/.config/zsh/.util_func.sh ]] && source ~/.config/zsh/.util_func.sh
 
 # proxy functions
-[[ -f ~/.config/zsh/.proxy.zsh ]] && source ~/.config/zsh/.proxy.zsh
+[[ -f ~/.config/zsh/.proxy.sh ]] && source ~/.config/zsh/.proxy.sh
 
 # nvm
 [ -f ~/.config/nvm/nvmrc.sh ] && source ~/.config/nvm/nvmrc.sh
