@@ -1,9 +1,16 @@
 #!/bin/bash
 
+
+set -e
+
 # install nvm if not exists
 if [ ! -d "$HOME/.nvm" ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 fi
+
+# Load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # install node if not exists
 if [ ! -d "$HOME/.nvm/versions/node/v22.16.0" ]; then
@@ -11,9 +18,7 @@ if [ ! -d "$HOME/.nvm/versions/node/v22.16.0" ]; then
 fi
 
 # install codex
-if [ ! -d "$HOME/.codex" ]; then
-    git clone https://github.com/codex-ai/codex.git $HOME/.codex
-fi
+npm i -g @openai/codex
 
 # copy the codex config from .codex/config.toml to $HOME/.codex/config.toml, check if the file exists
 if [ ! -f "$HOME/.codex/config.toml" ]; then
