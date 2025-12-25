@@ -124,4 +124,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 [[ $- == *i* ]] && command -v nerdfetch >/dev/null 2>&1 && nerdfetch
 
 # zellij
-[[ -z "$ZELLIJ_SESSION_NAME" ]] && zellij attach -c $USER@$(hostname)
+# [[ -z "$ZELLIJ_SESSION_NAME" ]] && zellij attach -c $USER@$(hostname)
