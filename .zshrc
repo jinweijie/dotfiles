@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Start configuration added by Zim Framework install {{{
 #
 # User configuration sourced by interactive shells
@@ -126,3 +119,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # add api keys
 [[ -f ~/.api_keys ]] && source ~/.api_keys
+
+# nerdfetch
+[[ $- == *i* ]] && command -v nerdfetch >/dev/null 2>&1 && nerdfetch
+
+# zellij
+command -v zellij >/dev/null 2>&1 && eval "$(zellij setup --generate-auto-start zsh)"
