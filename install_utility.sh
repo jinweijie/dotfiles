@@ -20,6 +20,10 @@ tar xf lazydocker.tar.gz -C lazydocker-temp
 sudo mv lazydocker-temp/lazydocker /usr/local/bin
 rm -rf lazydocker.tar.gz lazydocker-temp
 
+# nerdfetch
+sudo curl -fsSL https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/main/nerdfetch -o /usr/bin/nerdfetch
+sudo chmod +x /usr/bin/nerdfetch
+
 # yazi
 # wget -qO yazi.zip https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-gnu.zip
 # unzip -q yazi.zip -d yazi-temp
