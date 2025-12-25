@@ -124,4 +124,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 [[ $- == *i* ]] && command -v nerdfetch >/dev/null 2>&1 && nerdfetch
 
 # zellij
-command -v zellij >/dev/null 2>&1 && eval "$(zellij setup --generate-auto-start zsh)"
+[[ -z "$ZELLIJ_SESSION_NAME" ]] && zellij attach -c $USER@$(hostname)
