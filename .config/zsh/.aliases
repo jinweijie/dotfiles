@@ -180,3 +180,7 @@ esac
 if [ -x "$(command -v lazygit)" ]; then
   alias gla='lazygit'
 fi
+
+# Utility
+alias lg="lazygit"
+alias ldk="lazydocker"
