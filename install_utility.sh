@@ -45,7 +45,7 @@ echo "Finished installation of neovim."
 # lazyvim
 echo "Starting installation of lazyvim..."
 DOTFILES="$HOME/dotfiles"
-NVIM_DIR="$HOME/.config/nvim"
+NVIM_DIR="$HOME/dotfiles/.config/nvim"
 
 # 1. Ensure the dotfiles config directory exists
 mkdir -p "$DOTFILES/.config"
