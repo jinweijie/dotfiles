@@ -1,6 +1,8 @@
 README.md
 dot_manager.sh
 dot_manager.md
+install_codex.sh
+install_utility.sh
 .git
 .gitignore
 .DS_Store
@@ -9,5 +11,4 @@ LICENSE
 .idea
 .vscode
 .codex
-install_codex.sh
 .*\.bak
