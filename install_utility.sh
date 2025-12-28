@@ -28,6 +28,7 @@ sudo chmod +x /usr/bin/nerdfetch
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim-linux-x86_64
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+rm -rf nvim-linux-x86_64.tar.gz
 
 # yazi
 # wget -qO yazi.zip https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-gnu.zip
