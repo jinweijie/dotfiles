@@ -35,13 +35,12 @@ This will:
 
 ## Commands
 
-
 - `./dot_manager.sh all` - Complete setup (install + setup + stow)
 - `./dot_manager.sh install` - Install packages
 - `./dot_manager.sh setup` - Setup Zsh
 - `./dot_manager.sh stow` - Link dotfiles
 - `. ./dot_manager.sh set_proxy` - Set network proxy (source it to apply to shell)
-
+- `cd ~/dotfiles && stow -v -R -t ~ .` - Refresh link dotfiles manually
 ## What's Included
 
 - **zsh** with Zim framework and Powerlevel10k theme
