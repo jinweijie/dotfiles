@@ -10,3 +10,4 @@ LICENSE
 .vscode
 .codex
 install_codex.sh
+.*\.bak
