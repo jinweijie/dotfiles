@@ -105,6 +105,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # aliases file
 [[ -f ~/.config/zsh/.aliases ]] && source ~/.config/zsh/.aliases
 
+# paths file
+[ -f ~/.config/zsh/.paths ] && source ~/.config/zsh/.paths
+
 # utility functions
 [[ -f ~/.config/zsh/.util_func.sh ]] && source ~/.config/zsh/.util_func.sh
 

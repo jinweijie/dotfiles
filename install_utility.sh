@@ -24,6 +24,11 @@ rm -rf lazydocker.tar.gz lazydocker-temp
 sudo curl -fsSL https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/main/nerdfetch -o /usr/bin/nerdfetch
 sudo chmod +x /usr/bin/nerdfetch
 
+# neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+
 # yazi
 # wget -qO yazi.zip https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-gnu.zip
 # unzip -q yazi.zip -d yazi-temp
