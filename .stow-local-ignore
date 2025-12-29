@@ -3,6 +3,7 @@ dot_manager.sh
 dot_manager.md
 install_codex.sh
 install_utility.sh
+stow.sh
 .git
 .gitignore
 .DS_Store
