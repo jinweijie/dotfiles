@@ -34,6 +34,13 @@ chmod +x nerdfetch
 sudo mv nerdfetch /usr/local/bin/
 echo "Finished installation of nerdfetch."
 
+# lf
+wget https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz
+tar -xvf lf-linux-amd64.tar.gz
+chmod +x lf
+sudo mv lf /usr/local/bin/
+rm -rf lf-linux-amd64.tar.gz
+
 # neovim
 echo "Starting installation of neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz

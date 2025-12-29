@@ -95,10 +95,6 @@ If that fails, or to install manually:
 - **lightline**: Proper status line
 - **gruvbox**: Theme
 
-- **gruvbox**: Theme
-
-- **gruvbox**: Theme
-
 ## Zellij Configuration
 
 The repository includes a `config.kdl` for **Zellij** with a customized Gruvbox theme and simplified UI.
@@ -131,3 +127,8 @@ Zellij uses a mode-based system. Common default bindings + customs:
 - User with sudo privileges
 - Internet connection
 
+## Notes
+
+### Lazyvim
+
+- If there are errors when tree-sitter installing language parser, try `npm install -g tree-sitter-cli@0.25.10`.
